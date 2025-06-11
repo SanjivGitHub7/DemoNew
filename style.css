@@ -1,0 +1,74 @@
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+#ram-list{
+    list-style-type: none;
+    margin-top: 20px;
+}
+.ram-options {
+    position: relative;
+    padding: 10px 20px 10px 50px; /* leave space for circle */
+    margin: 10px 0;
+    background-color: #ffb3b3;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    font-size: 16px;
+}
+.ram-options::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid #555;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.ram-options.selected {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #ff8080;
+    font-weight: bold;
+}
+.ram-options.selected::before {
+    width: 24px;
+    height: 24px;
+    background-color: #ff3333;
+    border-color: #ff8080;
+    
+}
+.ram-options::after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent; /* no fill initially */
+    transition: all 0.3s ease;
+}
